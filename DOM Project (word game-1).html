@@ -1,0 +1,158 @@
+<!doctype html>
+													<!dom project A>  <!dom project Test> <!dom project B>
+<html>
+<head>
+<title>word game</title>
+
+<style>
+*{margin:0px 0px 0px 0px; padding:10px 10px 10px 10px; }
+option{ color:green;font-family:jokerman; font-size:20px; }
+select{  color:green;font-family:jokerman; font-size:55px; }
+
+#cal1,#cal2{ border= 5px solid green; width:100%; height:300px; background:lightyellow;}
+
+#btn{width:12%; height:50px;}
+#btnc,#btnb{width:19%;height:45px;}
+
+
+</style>
+
+<script>
+document.write("<h1 align='center'>LET'S GO</h1><br><br>");	
+document.write("<h1 align='center'>BUDDY</h1><br><br>");	
+document.write("<h3>how to play (watch at the end)</h3><br><br>");	
+ var row=prompt(" No. of row (row<12) ");
+ var col=prompt("  No. of coloum (col<12)");
+ alert(row*col);
+for (var i=1; i<=row; i++){ 
+	for(var j=1; j<=col; j++){document.write("<select><option>..</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option><option>M</option><option>N</option><option>O</option><option>P</option><option>Q</option><option>R</option><option>S</option><option>T</option><option>U</option><option>V</option><option>W</option><option>X</option><option>Y</option><option>Z</option></select>");}
+								document.write( "<br>" );		}
+function players(numb){document.getElementById("hi"+numb).innerHTML=prompt("enter ur name");}
+</script>
+
+</head>
+<body bgcolor="grey">
+
+<br>
+
+<div class="players" >
+<div id="cal1" >
+<input type="button" id="player1" value="player 1"/><p id="hi1" onclick="players('1')" style="color:#00ffee; font-size:40px;border: 3px solid #00ffee;">Enter name..........................</p>
+			
+<form name="form"><input type="text" name="numb" />
+<input id="btn" type="button" value="=" onclick="form.numb.value = eval(form.numb.value)" />
+<input id="btn" type="button" value="+" onclick="form.numb.value +='+' " />
+<input id="btn" type="button" value="-" onclick="form.numb.value +='-' " />
+<input id="btn" type="button" value="*" onclick="form.numb.value +='*' " />
+<input id="btn" type="button" value="/" onclick="form.numb.value +='/' " />
+
+<!--<input id="btn" type="button"   value="+/-" onclick="form.numb.value = - form.numb.value ">-->
+<br>
+						<input id="btn" type="button"  value="&darr; (-1)" onclick="form.numb.value = form.numb.value - 1 ">
+						<input id="btn" type="button" value="0" onclick="form.numb.value +='0' "/>
+						<input id="btn" type="button" value="1" onclick="form.numb.value +='1' "/>
+						<input id="btn" type="button" value="2" onclick="form.numb.value +='2' "/>
+						<input id="btn" type="button" value="3" onclick="form.numb.value +='3' "/>
+						<input id="btn" type="button" value="4" onclick="form.numb.value +='4' "/><input id="btnb" type="button"  value=" &larr; " onclick="form.numb.value = form.numb.value.substring(0,form.numb.value.length*1-1) "><br>		
+						<input id="btn" type="button"  value="&uarr; (+1)" onclick="form.numb.value =+ form.numb.value + 1 ">
+						<input id="btn" type="button" value="5" onclick="form.numb.value +='5' "/>
+						<input id="btn" type="button" value="6" onclick="form.numb.value +='6' "/>
+						<input id="btn" type="button" value="7" onclick="form.numb.value +='7' "/>
+						<input id="btn" type="button" value="8" onclick="form.numb.value +='8' "/>
+						<input id="btn" type="button" value="9" onclick="form.numb.value +='9' "/><input id="btnc" type="button"  value="clear all" onclick="form.numb.value = ' ' "><br>
+</form>
+
+</div><br><br>
+	
+	<div id="cal2">
+<input type="button" id="player2" value="player 2"  /><p id="hi2" onclick="players('2')" style="color:#bbfeee; font-size:40px;border: 3px solid #bbff0e;">Enter name..........................</p>
+			
+<form name="form"><input type="text" name="numb" />
+<input id="btn" type="button" value="=" onclick="form.numb.value = eval(form.numb.value)" />
+<input id="btn" type="button" value="+" onclick="form.numb.value +='+' " />
+<input id="btn" type="button" value="-" onclick="form.numb.value +='-' " />
+<input id="btn" type="button" value="*" onclick="form.numb.value +='*' " />
+<input id="btn" type="button" value="/" onclick="form.numb.value +='/' " />
+<!-- <input id="btn" type="button"  value="+/-" onclick="form.numb.value = - form.numb.value "> -->
+<br>
+						<input id="btn" type="button"  value="&darr; (-1)" onclick="form.numb.value = form.numb.value - 1 ">
+						<input id="btn" type="button" value="0" onclick="form.numb.value +='0' "/>
+						<input id="btn" type="button" value="1" onclick="form.numb.value +='1' "/>
+						<input id="btn" type="button" value="2" onclick="form.numb.value +='2' "/>
+						<input id="btn" type="button" value="3" onclick="form.numb.value +='3' "/>
+						<input id="btn" type="button" value="4" onclick="form.numb.value +='4' "/><input id="btnb" type="button"  value=" &larr; " onclick="form.numb.value = form.numb.value.substring(0,form.numb.value.length*1-1) "><br>		
+						<input id="btn" type="button"  value="&uarr; (+1)" onclick="form.numb.value =+ form.numb.value + 1 ">
+						<input id="btn" type="button" value="5" onclick="form.numb.value +='5' "/>
+						<input id="btn" type="button" value="6" onclick="form.numb.value +='6' "/>
+						<input id="btn" type="button" value="7" onclick="form.numb.value +='7' "/>
+						<input id="btn" type="button" value="8" onclick="form.numb.value +='8' "/>
+						<input id="btn" type="button" value="9" onclick="form.numb.value +='9' "/><input id="btnc" type="button"  value="clear all" onclick="form.numb.value = ' ' "><br>
+</form>
+		</div>
+</div><br><br>
+
+
+<div>
+<marquee>                KAISE                    KHELTE              H           SIKHO  ☺☺☻☻</marquee>
+<table border=1>
+<tr>
+<th>	<table id="tabel" border=1 >
+
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+	<tr>		<th></th><th>I</th><th></th><th></th><th></th>	</tr>
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+<p>player1 type &rarr;  "I" means  "मैं" i.e 1 point get by player 1 then press the button 1 in calculator </p>
+	</table>
+</th>
+<th><p border= "1px solid">point 1  </th>
+</tr>
+</table>
+
+<table border=1>
+<tr>
+<th>
+<table id="tabel" border=1 >
+
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+	<tr>		<th></th><th>I</th><th>N</th><th></th><th></th>	</tr>
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+<p>player2 type &rarr;  "N"  then maked a word "IN" means  "में" i.e 2 point get by player 2 then press the button + 2 in calculator </p>
+</table>
+</th>
+<th><p border= "1px solid">point  2  </th>
+</tr>
+</table>
+
+<table border=1>
+<tr>
+<th>
+<table id="tabel" border=1 >
+
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+	<tr>		<th></th><th>I</th><th>N</th><th>K</th><th></th>	</tr>
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+<p>player1 type &rarr;  "k"  then maked a word "INK" means  "स्याही" i.e 3 point get by player 1 then press the button + 3 in calculator so that ponits increase</p>
+</table>
+</th>
+<th><p border= "1px solid">point  1 + 3  </th>
+</tr>
+</table>
+
+<table border=1>
+<tr>
+<th>
+<table id="tabel" border=1 >
+
+	<tr>		<th></th><th></th><th></th><th></th><th></th>	</tr>
+	<tr>		<th></th><th>I</th><th>N</th><th>K</th><th></th>	</tr>
+	<tr>		<th></th><th>S</th><th></th><th></th><th></th>	</tr>
+<p>player2 type &rarr;  "S"  then maked a word "IS" means  "है" i.e 2 point get by player 2 then press the button + 2 in calculator so that ponits increase</p>
+</table>
+</th>
+<th><p border= "1px solid">point  1 + 2  </th>
+</tr>
+</table>
+<p style="color:red; font-size:30px;"> And like this way; isi trah game age badega tab tak jb tak all cells completely fill na ho jaye or gradually those player win who got more points. </p>
+</div>
+</body>
+</html>
